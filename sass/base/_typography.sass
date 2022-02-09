@@ -2,16 +2,23 @@
 %heading
     font-family: abstracts.$font-display
     font-weight: 400
-.heading-1
-    @extend %heading
-.heading-2
-    @extend %heading
-.heading-3
-    @extend %heading
-.heading-4
-    @extend %heading
-    font-size: 1.9rem
+%dark_light
     &--light
         color: abstracts.$grey-light-1
     &--dark
         color: abstracts.$grey-dark-1
+.heading-1
+    @extend %heading
+.heading-2
+    @extend %heading
+    @extend %dark_light
+    font: italic 4rem/1 abstracts.$font-display
+.heading-3
+    @extend %heading
+    font-size: 1.6rem
+    color: abstracts.$primary
+    text-transform: uppercase
+.heading-4
+    @extend %heading
+    font-size: 1.9rem
+    @extend %dark_light
