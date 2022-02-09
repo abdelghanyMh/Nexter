@@ -107,8 +107,64 @@ body {
 }
 
 .homes {
-  background-color: #c69963;
   grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+}
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem;
+}
+.home__img {
+  width: 100%;
+  z-index: 20;
+}
+.home__location, .home__rooms, .home__area, .home__price {
+  justify-self: center;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+  fill: #c69963;
+  width: 2rem;
+  height: 2rem;
+}
+.home__img {
+  grid-area: 1/1/2/-1;
+}
+.home__name {
+  grid-area: 1/1/2/-1;
+  justify-self: center;
+  align-self: end;
+  width: 80%;
+  padding: 1.25rem;
+  background-color: #101d2c;
+  color: #fff;
+  font: 400 1.6rem "Josefin Sans", sans-serif;
+  text-align: center;
+  transform: translateY(50%);
+  z-index: 21;
+}
+.home__location, .home__rooms {
+  margin-top: 2.5rem;
+}
+.home__like {
+  grid-area: 1/2/2/3;
+  justify-self: end;
+  margin: 1rem;
+  z-index: 21;
+  fill: #c69963;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.home__btn {
+  grid-column: 1/-1;
 }
 
 .realtors {
