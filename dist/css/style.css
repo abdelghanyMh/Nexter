@@ -30,6 +30,12 @@ body {
   font-weight: 400;
 }
 
+.heading-1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: #f9f7f6;
+}
+
 .heading-2 {
   font: italic 4rem/1 "Josefin Sans", sans-serif;
 }
@@ -211,6 +217,26 @@ body {
 .header {
   background-color: #aaa;
   grid-column: full-start/col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  justify-content: center;
+  padding: 4rem 8rem 8rem;
+}
+.header__logo {
+  height: 3rem;
+  justify-self: center;
+}
+.header__btn {
+  align-self: start;
+  justify-self: start;
+}
+.header__seenon-logos img {
+  height: 2.5rem;
 }
 
 .footer {

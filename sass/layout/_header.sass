@@ -1,5 +1,25 @@
 @use '../abstracts' 
 .header
     background-color: abstracts.$grey-light-2
-    grid-column:  full-start / col-end 6 
+    grid-column: full-start / col-end 6
+    background-image: linear-gradient(rgba( abstracts.$secondary, .93),rgba( abstracts.$secondary, .93)),url(../img/hero.jpeg)
+    background-position: center
+    background-size: cover
 
+    display: grid
+    gap: 1.5rem
+    grid-template-rows: 1fr min-content 6rem 1fr
+    grid-template-columns: max-content
+    justify-content: center
+    padding: 4rem 8rem 8rem
+    &__logo
+        height: 3rem
+        justify-self: center
+    &__btn
+        align-self: start
+        justify-self: start
+    &__seenon
+        // &-text
+        &-logos
+            img
+                height: 2.5rem
