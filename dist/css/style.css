@@ -235,8 +235,35 @@ body {
   align-self: start;
   justify-self: start;
 }
+.header__seenon-text {
+  font-size: 1.6rem;
+  color: #aaa;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+.header__seenon-text::before, .header__seenon-text::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.header__seenon-logos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
 .header__seenon-logos img {
   height: 2.5rem;
+  filter: brightness(70%);
+  transition: all 0.5s ease-out;
+}
+.header__seenon-logos img:hover {
+  filter: brightness(100%);
 }
 
 .footer {
