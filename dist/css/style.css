@@ -102,8 +102,62 @@ body {
 }
 
 .gallery {
-  background-color: #101d2c;
+  background-color: #f9f7f6;
+  padding: 1.5rem;
   grid-column: full-start/full-end;
+  display: grid;
+  grid: repeat(7, 5vw)/repeat(8, 1fr);
+  gap: 1.5rem;
+  grid-auto-flow: row dense;
+}
+.gallery__item--1 {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.gallery__item--2 {
+  grid-row: 1/span 3;
+  grid-column: 3/span 3;
+}
+.gallery__item--3 {
+  grid-area: 1/6/span 2/7;
+}
+.gallery__item--4 {
+  grid-area: 1/7/span 2/span 2;
+}
+.gallery__item--5 {
+  grid-area: 3/1/span 3/span 2;
+}
+.gallery__item--6 {
+  grid-area: 4/3/span 2/span 2;
+}
+.gallery__item--8 {
+  grid-area: 3/6/span 2/span 2;
+}
+.gallery__item--9 {
+  grid-area: 3/8/span 3/9;
+}
+.gallery__item--10 {
+  grid-area: 6/1/span 2/2;
+}
+.gallery__item--11 {
+  grid-area: 6/2/span 2/span 2;
+}
+.gallery__item--12 {
+  grid-area: 6/4/span 2/5;
+}
+.gallery__item--13 {
+  grid-area: 5/5/span 3/span 3;
+}
+.gallery__item--14 {
+  grid-row-end: span 2;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .homes {
