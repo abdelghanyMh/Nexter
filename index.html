@@ -14,10 +14,31 @@
 </head>
 
 <body class="container">
-    <div class="sidebar">sidebar</div>
-    <haeader class="header">haeader</haeader>
-    <div class="realtors">realtors</div>
-    <section class="features">
+    <div class="sidebar">
+        <input type="checkbox" class="sidebar__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="sidebar__button">
+            <span class="sidebar__icon">&nbsp;</span>
+        </label>
+        <div class="sidebar__background">&nbsp;</div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="#header" class="sidebar__link"><span>01</span>About Nexter</a></li>
+                <li class="sidebar__item"><a href="#realtors" class="sidebar__link"><span>02</span>Popular realtors</a></li>
+                <li class="sidebar__item"><a href="#features" class="sidebar__link"><span>03</span>Your benfits</a></li>
+
+                <li class="sidebar__item"><a href="#stories" class="sidebar__link"><span>04</span>Stories</a></li>
+                <li class="sidebar__item"><a href="#homes" class="sidebar__link"><span>05</span>Homes list </a></li>
+                <li class="sidebar__item"><a href="#gallery" class="sidebar__link"><span>05</span>Gallery </a></li>
+            </ul>
+        </nav>
+    </div>
+    <haeader id="header" class="header">haeader</haeader>
+
+    <div id="realtors" class="realtors">realtors</div>
+
+    <section id="features" class="features">
         <div class="feature">
             <svg class="feature__icon">
                 <use xlink:href="dist/img/sprite.svg#icon-global"></use>
@@ -76,7 +97,7 @@
         </div>
 
     </section>
-    <div class="story__pictures">
+    <div id="stories" class="story__pictures">
         <img src="dist/img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
         <img src="dist/img/story-2.jpeg" alt="New house" class="story__img--2">
     </div>
@@ -90,7 +111,7 @@
         </p>
         <button class="btn">Find your own home</button>
     </div>
-    <section class="homes">
+    <section  id="homes" class="homes">
         <div class="home">
             <img src="dist/img/house-1.jpeg" alt="House 1" class="home__img">
             <svg class="home__like">
@@ -290,7 +311,7 @@
             <button class="btn home__btn">Contact realtor</button>
         </div>
     </section>
-    <section class="gallery">
+    <section id="gallery" class="gallery">
         <figure class="gallery__item gallery__item--1">
             <img src="dist/img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img">
         </figure>
@@ -346,10 +367,13 @@
             <li class="nav__item"><a href="#" class="nav__link">Come work with us!</a></li>
         </ul>
         <p class="copyright">
-            &copy; Copyright 2021 by <a href="https://github.com/abdelghanyMh" target="_blank" >abdelghanyMh</a> following Jonas Schmedtmann. Feel free to use this project for your own purposes. This does
+            &copy; Copyright 2021 by <a href="https://github.com/abdelghanyMh" target="_blank">abdelghanyMh</a>
+            following Jonas Schmedtmann. Feel free to use this project for your own purposes. This does
             NOT apply if you plan to produce your own course or tutorials based on this project.
         </p>
     </footer>
+    <!-- add hide nav bar script-->
+    <script src="dist/js/script.js"></script>
 </body>
 
 </html>
