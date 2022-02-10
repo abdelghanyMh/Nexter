@@ -460,6 +460,26 @@ body {
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7/full-end;
+  padding: 3rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.realtors__list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  align-items: center;
+  gap: 5vh 2rem;
+}
+.realtors__img {
+  width: 7rem;
+  border-radius: 50%;
+}
+.realtors__sold {
+  text-transform: uppercase;
+  color: #f9f7f6;
+  margin-top: -3px;
 }
 
 .story__pictures {
