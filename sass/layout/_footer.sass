@@ -1,4 +1,44 @@
-@use '../abstracts' 
+@use '../abstracts'
 .footer
-    background-color: abstracts.$grey-dark-1
+    background-color: abstracts.$secondary
     grid-column: full-start / full-end
+    padding: 8rem
+.nav
+    list-style: none
+
+    display: flex
+    flex-flow: row wrap
+    gap: 1rem
+
+    &__link:link,&__link:visited
+        font: 1.4rem abstracts.$font-display
+        text-transform: uppercase
+        text-align: center
+        text-decoration: none
+
+        color: abstracts.$white
+
+        display: block
+        padding: 1.5rem
+        max-width: 15rem
+
+        transition: all .2s  ease-in
+
+        &:hover
+            transform: translateY(-3px)
+            background-color: rgba(abstracts.$white ,.1 )
+
+.copyright
+    font-size: 1.4rem
+    color: abstracts.$grey-light-2
+    text-align: center
+
+    margin: 6rem auto auto
+    width: 70%
+    a
+        font: 500 1.5rem abstracts.$font-display
+        color: abstracts.$white
+        &:hover
+            text-decoration: abstracts.$grey-dark-2 wavy underline
+            color: abstracts.$primary
+            font-style: italic

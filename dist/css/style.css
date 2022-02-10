@@ -71,8 +71,48 @@ body {
 }
 
 .footer {
-  background-color: #54483A;
+  background-color: #101d2c;
   grid-column: full-start/full-end;
+  padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+.nav__link:link, .nav__link:visited {
+  font: 1.4rem "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 1.5rem;
+  max-width: 15rem;
+  transition: all 0.2s ease-in;
+}
+.nav__link:link:hover, .nav__link:visited:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-align: center;
+  margin: 6rem auto auto;
+  width: 70%;
+}
+.copyright a {
+  font: 500 1.5rem "Josefin Sans", sans-serif;
+  color: #fff;
+}
+.copyright a:hover {
+  text-decoration: #6D5D4B wavy underline;
+  color: #c69963;
+  font-style: italic;
 }
 
 .features {
