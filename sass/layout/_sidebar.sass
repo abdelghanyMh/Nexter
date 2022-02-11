@@ -9,6 +9,14 @@
     background-color: abstracts.$primary
     grid-column: sidebar-start / sidebar-end
     grid-row: 1 / -1
+    @include abstracts.respond(large)
+        position: sticky !important
+        z-index: abstracts.$zindex-sidebar
+        top: 0
+        box-sizing: border-box
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+
     &__checkbox
         display: none
 
@@ -21,6 +29,11 @@
         width: 7rem
 
         z-index: abstracts.$zindex-sidebar-btn
+        @include abstracts.respond(large)
+            top: -4px
+            right: .5rem
+            left: unset
+        
 
     &__background
         position: fixed
@@ -35,6 +48,11 @@
         z-index: abstracts.$zindex-sidebar-bg-clr
         visibility: hidden
         transition: all .5s ease-in-out
+        @include abstracts.respond(large)
+            top: -4px
+            right: .5rem
+            left: unset
+
 
     &__nav
         height: 100vh
@@ -45,7 +63,7 @@
         position: fixed
         top: 0
         left: 0
-        z-index:  abstracts.$zindex-sidebar-nav-links
+        z-index: abstracts.$zindex-sidebar-nav-links
 
     &__list
         @include abstracts.absCenter()
@@ -88,7 +106,6 @@
             .sidebar__background
                 transform: scale(0) !important
 
-    
     // this way we used checkbox
 
     &__checkbox:checked ~ &__background
@@ -104,7 +121,6 @@
         .sidebar__link
             &:link,&:visited
                 display: inline-block
-
 
     &__icon
         @include abstracts.absCenter()
