@@ -4,3 +4,33 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+
+// MEDIA QUERY MANAGER
+/*
+ [0 - 600px ]: small
+ [0 - 800px ]: meduim
+ [0 - 900px ]: large
+ [0 - 1000px]: largest
+ 1000px + :    is where our design apply
+
+    $breakpoint arguement choices: 
+        - small
+        - meduim
+        - large
+        - largest
+        1em = 16px
+
+@mixin respond($breakpoint)
+
+    @if $breakpoint == small
+        @media only screen and ( max-width: 37.5em  )// 600/16
+            @content
+    @if $breakpoint == meduim
+        @media only screen and ( max-width: 50em ) // 800/16
+            @content
+    @if $breakpoint ==  large
+        @media only screen and ( max-width: 62.5em ) //900px/16
+            @content
+    @if $breakpoint == largest
+        @media only screen and ( max-width: 75em  ) //1000px/16
+            @content
