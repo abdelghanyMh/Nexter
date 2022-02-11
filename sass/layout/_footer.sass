@@ -3,12 +3,17 @@
     background-color: abstracts.$secondary
     grid-column: full-start / full-end
     padding: 8rem
+    @include abstracts.respond(small)
+        padding: 7rem 3rem
 .nav
     list-style: none
 
     display: flex
     flex-flow: row wrap
+    justify-content: center
     gap: 1rem
+    @include abstracts.respond(small)
+        gap: unset
 
     &__link:link,&__link:visited
         font: 1.4rem abstracts.$font-display
@@ -22,7 +27,7 @@
         padding: 1.5rem
         max-width: 15rem
 
-        transition: all .2s  ease-in
+        transition: all .2s ease-in
 
         &:hover
             transform: translateY(-3px)
