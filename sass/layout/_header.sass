@@ -8,10 +8,17 @@
 
     display: grid
     gap: 1.5rem
-    grid-template-rows: 1fr min-content 6rem 1fr
-    grid-template-columns: max-content
+    grid-template-rows: 1fr min-content minmax(6rem,min-content) 1fr
+    grid-template-columns: minmax(min-content,max-content)
     justify-content: center
     padding: 4rem 8rem 8rem
+    @include abstracts.respond(meduim)
+        grid-column: full-start / full-end
+
+    @include abstracts.respond(small)
+        padding-left: 3rem
+        padding-right: 3rem
+
     &__logo
         height: 3rem
         justify-self: center
@@ -41,7 +48,8 @@
             justify-content: center
             gap: 6rem
             img
-                height: 2.5rem
+                max-height: 2.5rem
+                max-width: 100%
                 filter: brightness(70%)
                 transition: all .5s ease-out
                 &:hover

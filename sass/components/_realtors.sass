@@ -7,11 +7,23 @@
     align-items: center
     justify-content: center
     justify-items: center
+    @include abstracts.respond(meduim)
+        grid-column: full-start / full-end
+        grid-row: 3 / 4
+        gap: 2.5rem
+
+    
     &__list
         display: grid
         grid-template-columns: min-content max-content
         align-items: center
         gap: 5vh 2rem
+        @include abstracts.respond(meduim)
+            grid-template-columns: repeat(3,min-content max-content)
+
+        @include abstracts.respond(small)
+            grid-template-columns: min-content max-content
+
     &__img
         width: 7rem
         border-radius: 50%
@@ -19,4 +31,3 @@
         text-transform: uppercase
         color: abstracts.$grey-light-1
         margin-top: -3px
-
