@@ -10,7 +10,7 @@
 html
     scroll-behavior: smooth
     box-sizing: border-box
-    font-size: 62.5% // 10px/16px = 62.5% -> 1rem = 10px
+    font-size: font-size: 69.5%// 10px/16px = 62.5% -> 1rem = 10px
     @include abstracts.respond(largest)
         font-size: 50% // 1rem = 8px
 
@@ -28,5 +28,5 @@ body
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3 , min-content)
         grid-template-columns: [full-start] minmax(6rem,1fr) [center-start] repeat(8 , [col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end]
     @include abstracts.respond(meduim)
-        grid-template-rows: 6rem calc(100vh - 6rem) 
+        grid-template-rows: 6rem calc(100vh - 6rem)
         /* the remaining rows will be sizes based on the content*/
