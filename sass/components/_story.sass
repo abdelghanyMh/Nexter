@@ -1,4 +1,7 @@
 @use '../abstracts'
+$transform-duration: 300ms
+$opacity-duration: 5ms
+$translateX: 336
 
 .story
     &__pictures
@@ -12,6 +15,16 @@
             grid-column: full-start / full-end
             padding: 6rem
 
+        // Applies styles when the user has made no preference known
+        @media screen and (prefers-reduced-motion: no-preference)
+            transition: transform $transform-duration ease-out,opacity $opacity-duration ease-out
+            &.animate
+                &-is-intersect
+                    transform: rotate(0deg)
+                    opacity: 1
+                &-is-not-intersect
+                    transform: rotate(-60deg)
+                    opacity: 0
     &__img--1
         width: 100%
         // grid-area: row-start / column-start / row-end / column-end 
@@ -43,6 +56,16 @@
             grid-row: 5 / 6
             padding: 3rem
 
+        // Applies styles when the user has made no preference known
+        @media screen and (prefers-reduced-motion: no-preference)
+            transition: transform $transform-duration ease-out,opacity $opacity-duration ease-out
+            &.animate
+                &-is-intersect
+                    transform: rotate(0deg)
+                    opacity: 1
+                &-is-not-intersect
+                    transform: rotate(60deg)
+                    opacity: 0
     &__text
         font: italic 1.5rem abstracts.$font-primary
         margin-bottom: 4rem

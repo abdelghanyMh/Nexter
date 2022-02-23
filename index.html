@@ -35,6 +35,7 @@
             </ul>
         </nav>
     </div>
+   
     <header id="header" class="header">
         <img src="dist/img/logo.png" alt="Nexter logo" class="header__logo">
         <h3 class="heading-3">Your own home:</h3>
@@ -72,7 +73,7 @@
         </div>
     </div>
 
-    <section id="features" class="features">
+    <section id="features" class="features animate animate-is-not-intersect">
         <div class="feature">
             <svg class="feature__icon">
                 <use xlink:href="dist/img/sprite.svg#icon-global"></use>
@@ -131,11 +132,13 @@
         </div>
 
     </section>
-    <div id="stories" class="story__pictures">
+    
+    <div id="stories" class="story__pictures animate animate-is-not-intersect">
         <img src="dist/img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
         <img src="dist/img/story-2.jpeg" alt="New house" class="story__img--2">
     </div>
-    <div class="story__content">
+    
+    <div class="story__content animate animate-is-not-intersect">
         <h3 class="heading-3 mb-sm">Happy Customers</h3>
         <h2 class="heading-2 heading-2--dark mb-md">&ldquo;The best decision of our lives&rdquo;</h2>
         <p class="story__text">
@@ -145,7 +148,8 @@
         </p>
         <button class="btn">Find your own home</button>
     </div>
-    <section id="homes" class="homes">
+    
+    <section id="homes" class="homes animate animate-is-not-intersect">
         <div class="home">
             <img src="dist/img/house-1.jpeg" alt="House 1" class="home__img">
             <svg class="home__like">
@@ -345,7 +349,8 @@
             <button class="btn home__btn">Contact realtor</button>
         </div>
     </section>
-    <section id="gallery" class="gallery">
+    
+    <section id="gallery" class="gallery animate animate-is-not-intersect">
         <figure class="gallery__item gallery__item--1">
             <img src="dist/img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img">
         </figure>
@@ -391,6 +396,7 @@
 
 
     </section>
+    
     <footer class="footer">
         <ul class="nav">
             <li class="nav__item"><a href="#" class="nav__link">Find your dream home</a></li>
@@ -408,6 +414,9 @@
     </footer>
     <!-- add hide nav bar script-->
     <script src="dist/js/script.js"></script>
+    
+    <!-- intersection observer api  -->
+    <script src="dist/js/observer.js"></script>
 </body>
 
 </html>

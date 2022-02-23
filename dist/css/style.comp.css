@@ -1,15 +1,3 @@
-/* 0 - 600px:      Phone
- * 600 - 900px:    Tablet portrait
- * 900 - 1200px:   Tablet landscape
- * [1200 - 1800] is where our normal styles apply
- * 1800px + :      Big desktop
- *
- *  $breakpoint arguement choices: 
- *      - phone
- *      - tab-port
- *      - tab-land
- *      - big-desktop
- *      1em = 16px */
 *,
 *::before,
 *::after {
@@ -19,9 +7,10 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 69.5%;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -396,8 +385,19 @@ body {
   /*remove space betwen heading and the text when the grid shrink */
   align-items: start;
 }
+@media screen and (prefers-reduced-motion: no-preference) {
+  .features.animate-is-intersect > * {
+    transform: none;
+    opacity: 1;
+  }
+  .features.animate-is-not-intersect > * {
+    transform: scale3d(1.5, 1.5, 1.5);
+    opacity: 0;
+  }
+}
 
 .feature {
+  transition: transform 300ms ease-out, opacity 600ms ease-out;
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: 1.5rem 2.5rem;
@@ -421,6 +421,9 @@ body {
   grid: repeat(7, 5vw)/repeat(8, 1fr);
   gap: 1.5rem;
   grid-auto-flow: row dense;
+}
+.gallery__item {
+  transition: opacity 300ms ease-out;
 }
 .gallery__item--1 {
   grid-row-start: 1;
@@ -465,6 +468,23 @@ body {
 .gallery__item--14 {
   grid-row-end: span 2;
 }
+.gallery__item--1, .gallery__item--4, .gallery__item--8, .gallery__item--10, .gallery__item--12 {
+  transition-delay: 100ms;
+}
+.gallery__item--2, .gallery__item--3, .gallery__item--5, .gallery__item--6, .gallery__item--7 {
+  transition-delay: 300ms;
+}
+.gallery__item--9, .gallery__item--11, .gallery__item--13, .gallery__item--14 {
+  transition-delay: 400ms;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .gallery.animate-is-intersect .gallery__item {
+    opacity: 1;
+  }
+  .gallery.animate-is-not-intersect .gallery__item {
+    opacity: 0;
+  }
+}
 .gallery__img {
   width: 100%;
   height: 100%;
@@ -474,10 +494,23 @@ body {
 
 .homes {
   grid-column: center-start/center-end;
-  margin: 15rem 0;
+  margin: 25rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .homes {
+    transition: transform 400ms ease-out, opacity 400ms ease-out;
+  }
+  .homes.animate-is-intersect {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .homes.animate-is-not-intersect {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 }
 
 .home {
@@ -485,6 +518,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.home:hover {
+  border: none;
+  box-shadow: none;
+  transform: translateY(-3px);
 }
 .home__img {
   width: 100%;
@@ -587,6 +629,19 @@ body {
     padding: 6rem;
   }
 }
+@media screen and (prefers-reduced-motion: no-preference) {
+  .story__pictures {
+    transition: transform 300ms ease-out, opacity 5ms ease-out;
+  }
+  .story__pictures.animate-is-intersect {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  .story__pictures.animate-is-not-intersect {
+    transform: rotate(-60deg);
+    opacity: 0;
+  }
+}
 .story__img--1 {
   width: 100%;
   grid-area: 2/2/6/6;
@@ -623,6 +678,19 @@ body {
     grid-column: full-start/full-end;
     grid-row: 5/6;
     padding: 3rem;
+  }
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .story__content {
+    transition: transform 300ms ease-out, opacity 5ms ease-out;
+  }
+  .story__content.animate-is-intersect {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  .story__content.animate-is-not-intersect {
+    transform: rotate(60deg);
+    opacity: 0;
   }
 }
 .story__text {

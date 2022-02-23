@@ -1,4 +1,6 @@
 @use '../abstracts'
+$delay: 100ms
+
 .gallery
     background-color: abstracts.$grey-light-1
     padding: 1.5rem
@@ -10,6 +12,8 @@
     grid-auto-flow: row dense
 
     &__item
+        transition: opacity 300ms ease-out
+
         &--1
             grid-row-start: 1
             grid-row-end: span 2
@@ -54,8 +58,22 @@
         &--14
             grid-row-end: span 2
 
+        &--1,&--4,&--8,&--10,&--12
+            transition-delay: $delay
+        &--2,&--3,&--5,&--6,&--7
+            transition-delay: 3*$delay
 
-
+        &--9,&--11,&--13,&--14
+            transition-delay: 4*$delay
+    // Applies styles when the user has made no preference known
+    @media screen and (prefers-reduced-motion: no-preference)
+        &.animate
+            &-is-intersect
+                .gallery__item
+                    opacity: 1
+            &-is-not-intersect
+                .gallery__item
+                    opacity: 0
 
     &__img
         width: 100%
