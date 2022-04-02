@@ -6,8 +6,8 @@ Nexter is A website ,unlike a landing page  of a fictional company called "nexte
 
 ## ✨ Demo
 
-![Mobile Layout]()
-![TAblet Layout]()
+![desktop demo](nexter_desktop.gif)
+![mobile demo](nexter_mobile.gif)
 
 ## 🚀 Usage
  > Clone the Repository  
