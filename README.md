@@ -1,8 +1,10 @@
 ﻿
 <h1 align="center">Welcome to Nexter  👋</h1>
 
-Nexter is A website ,unlike a landing page  of a fictional company called "nexter" which sells luxury home across the world. made by _following_  [Jonas Schmedtmann](https://www.udemy.com/user/jonasschmedtmann/) [Cours](https://www.udemy.com/advanced-css-and-sass/?couponCode=GITHUB4)
-### 🏠 [Homepage]()
+![Nexter](https://github.com/abdelghanyMh/Nexter/assets/33175196/ba62c860-d9e1-47f8-a320-8b8002823d10)
+
+Nexter is A website ,unlike a landing page  of a fictional company called "nexter" which sells luxury home across the world. 
+### 🏠 [Homepage](https://abdelghanymh.github.io/Nexter/)
 
 ## ✨ Demo
 
